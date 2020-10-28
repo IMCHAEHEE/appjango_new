@@ -12,7 +12,6 @@ import android.widget.Toast;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.toolbox.Volley;
-import com.sungkyul.appjango.R;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -58,9 +57,7 @@ public class LoginActivity extends AppCompatActivity {
                                 String userPassword = jsonObject.getString("userPassword");
 
                                 Toast.makeText(getApplicationContext(), "로그인에 성공하였습니다.", Toast.LENGTH_SHORT).show();
-                                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                                intent.putExtra("userID",userID);
-                                intent.putExtra("userPassword",userPassword);
+                                Intent intent = new Intent(LoginActivity.this, FavFood1.class);
                                 startActivity(intent);
                             } else {
                                 Toast.makeText(getApplicationContext(), "로그인에 실패하였습니다.", Toast.LENGTH_SHORT).show();
